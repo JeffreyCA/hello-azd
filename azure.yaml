@@ -24,6 +24,20 @@ services:
     host: containerapp
     docker:
       path: ./Dockerfile
+hooks:
+  preprovision: 
+    shell: sh
+    interactive: true
+    run: |
+      response=$(curl "https://aisenseapi.com/services/v1/datetime")
+      echo "Preprovision Response: $response"
+  postprovision: 
+    shell: sh
+    interactive: true
+    run: |
+      response=$(curl "https://aisenseapi.com/services/v1/datetime")
+      echo "Postprovision Response: $response"
+
 #   ## An example for a NodeJS API, located in src/api.
 #   nodejs-api:
 #     language: js

@@ -29,6 +29,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # - name: Install nightly azd
+      #   run: |
+      #     curl -fsSL https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/pr/6277/install-azd.sh | bash -s -- --base-url https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/pr/6277 --version '' --verbose --skip-verify
+      #   shell: bash
+
       - name: Install azd
         uses: Azure/setup-azd@v2
 
