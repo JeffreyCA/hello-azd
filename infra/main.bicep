@@ -96,7 +96,6 @@ module userAssignStorage './core/security/role.bicep' = {
   params: {
     principalId: principalId
     roleDefinitionId: 'ba92f5b4-2d11-453d-a403-e96b0029c9fe' // built-in role definition id for storage blob data contributor
-    principalType: 'User'
   }
 }
 
